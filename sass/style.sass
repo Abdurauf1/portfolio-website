@@ -17,7 +17,6 @@ $dark-blue: #00092c
     font-family: ubuntu, sans-serif
 
 html
-    overflow-x: hidden
     scroll-behavior: smooth
 
 body
@@ -189,6 +188,20 @@ header
                     content: "/>"
                     color: $red
 
+@media screen and (max-width: 1000px)
+    #about
+        .info
+            .about-text
+                p
+                    font-size: 20px
+
+@media screen and (max-width: 800px)
+    #about
+        .info
+            .about-text
+                p
+                    font-size: 18px
+
 /* buttons container */
 .buttons-wrapper
     height: fit-content
@@ -210,6 +223,14 @@ header
 .bi-envelope
     margin-left: 5px
     color: $red
+
+@media screen and ( max-width: 600px )
+    .buttons-wrapper
+        flex-direction: column
+        .cv-button,
+        .email-me
+            width: 100%
+            margin: 10px 0
 
 /* skills */
 #skills
@@ -262,7 +283,7 @@ footer
     justify-content: space-between
     span
         color: $white
-    .my-github
+    .github-linkedin
         font-weight: 400
         text-decoration: none
         color: $white

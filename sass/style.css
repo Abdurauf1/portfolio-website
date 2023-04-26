@@ -12,7 +12,6 @@
 }
 
 html {
-  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -207,6 +206,16 @@ header .container .burger .line3 {
   color: #b20600;
 }
 
+@media screen and (max-width: 1000px) {
+  #about .info .about-text p {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #about .info .about-text p {
+    font-size: 18px;
+  }
+}
 /* buttons container */
 .buttons-wrapper {
   height: -moz-fit-content;
@@ -233,6 +242,16 @@ header .container .burger .line3 {
   color: #b20600;
 }
 
+@media screen and (max-width: 600px) {
+  .buttons-wrapper {
+    flex-direction: column;
+  }
+  .buttons-wrapper .cv-button,
+  .buttons-wrapper .email-me {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
 /* skills */
 #skills {
   width: 100%;
@@ -291,7 +310,7 @@ footer {
 footer span {
   color: #fff;
 }
-footer .my-github {
+footer .github-linkedin {
   font-weight: 400;
   text-decoration: none;
   color: #fff;
