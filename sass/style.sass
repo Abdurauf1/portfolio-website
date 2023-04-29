@@ -32,9 +32,20 @@ body
     .container
         width: 90%
 
+.title-text
+    color: $red
+    font-size: 20px
+.title
+    color: $white
+    font-size: 35px
+    line-height: 4rem
+
 @media screen and (max-width: 800px)
     .title
         font-size: 28px !important
+@media screen and (max-width: 800px)
+    .title-text
+        font-size: 18px
 
 // -------------------------
 /* nav */
@@ -43,7 +54,7 @@ header
     width: 100vw
     height: 5em
     background-color: $dark-blue
-    position: fixed
+    position: sticky
     top: 0
     z-index: 999
     .container
@@ -138,8 +149,7 @@ main
     // -------------------------
     #about
         width: 100%
-        margin-top: 5em
-        padding: 3rem 0
+        padding: 50px 0
         display: flex
         flex-direction: column
         align-items: center
@@ -237,39 +247,73 @@ main
                 width: 100%
                 margin: 10px 0
 
+    // -------------------------
     /* skills */
+    // -------------------------
     #skills
-        width: 100%
-        padding: 3rem 0
-        margin: 3rem 0
+        padding: 50px 0
+        .skills-wrapper
+            width: 100%
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            margin-top: 30px
+        .skill
+            width: 25%
+            font-size: 20px
+            color: $white
+            line-height: 35px
+            &::before
+                content: "<"
+                color: $red
+            &::after
+                content: " />"
+                color: $red
+    @media (max-width: 800px)
+        #skills
+            .skills-wrapper
+                .skill
+                    font-size: 18px
+    @media screen and (max-width: 600px)
+        #skills
+            .skills-wrapper
+                .skill
+                    width: 50%
 
-    .title-text
-        color: $red
-        font-size: 20px
-
-    .title
-        color: $white
-        font-size: 35px
-        line-height: 4rem
-
-    .skills-wrapper
-        width: 100%
-        display: flex
-        flex-wrap: wrap
-        justify-content: space-between
-        margin-top: 2rem
-
-    .skill
-        width: 25%
-        font-size: 20px
-        color: $white
-        line-height: 2.5rem
-        &::before
-            content: "<"
-            color: $red
-        &::after
-            content: " />"
-            color: $red
+    // -------------------------
+    /* projects */
+    // -------------------------
+    #projects
+        padding: 50px 0
+        .projects-container
+            margin-top: 30px
+            .project-item
+                width: 100%
+                height: 500px
+                background-image: url("../assets/images/lumia.png")
+                background-size: cover
+                padding: 0 100px
+                display: flex
+                justify-content: center
+                flex-direction: column
+                p:nth-child(1)
+                    color: $red
+                    font-weight: 400
+                    font-size: 20px
+                h3
+                    color: $white
+                    font-size: 32px
+                    line-height: 60px
+                a
+                    margin-top: 20px
+                    width: fit-content
+                    border-radius: 5px
+                    font-size: 20px
+                    font-weight: 500
+                    color: $white
+                    text-decoration: none
+                    padding: 10px 40px
+                    background-color: $red
 
     // -------------------------
     /* education */
@@ -278,7 +322,7 @@ main
         padding: 50px 0
         .education-container
             .education-item
-                margin-top: 40px
+                margin-top: 30px
                 display: flex
                 justify-content: space-between
                 color: $white
@@ -301,10 +345,6 @@ main
         .education-item
             padding-bottom: 5px
             flex-direction: column
-            .education-year,
-            .education-status,
-            .education-degree,
-                margin: 5px 0
 
     // -------------------------
     /* languages */
@@ -314,8 +354,8 @@ main
         .languages-container
             display: flex
             justify-content: space-between
+            margin-top: 30px
             .language
-                margin: 20px 0
                 color: $white
                 div:nth-child(1)
                     width: 40px
