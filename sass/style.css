@@ -1,7 +1,7 @@
 /* fonts */
 @font-face {
   font-family: ubuntu;
-  src: url("./assets/fonts/Ubuntu/Ubuntu-Regular.ttf");
+  src: url("../assets/fonts/Ubuntu/Ubuntu-Regular.ttf");
 }
 /* variables */
 * {
@@ -29,6 +29,11 @@ body {
 @media screen and (max-width: 1200px) {
   .container {
     width: 90%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .title {
+    font-size: 28px !important;
   }
 }
 /* nav */
@@ -136,7 +141,15 @@ header .container .burger .line3 {
   opacity: 1;
 }
 
-#about {
+/* body */
+main {
+  /* about me */
+  /* buttons container */
+  /* skills */
+  /* education */
+  /* languages */
+}
+main #about {
   width: 100%;
   margin-top: 5em;
   padding: 3rem 0;
@@ -146,13 +159,13 @@ header .container .burger .line3 {
   /* hero image */
   /* hero info */
 }
-#about .hero-img {
-  width: 14em;
+main #about .hero-img {
+  width: 20em;
   border-radius: 50%;
   position: relative;
   margin-bottom: 2em;
 }
-#about .hero-img::before {
+main #about .hero-img::before {
   content: "";
   width: 100%;
   height: 100%;
@@ -162,71 +175,68 @@ header .container .burger .line3 {
   z-index: -1;
   border-radius: 50%;
 }
-#about .hero-img::before {
+main #about .hero-img::before {
   background-color: #b20600;
   transform: translate(-0.5em, -0.5em);
 }
-#about .hero-img img {
+main #about .hero-img img {
   width: 100%;
   margin: 0 auto;
   border-radius: 50%;
 }
-#about .info {
+main #about .info {
   /* about me info text */
 }
-#about .info .my-name {
+main #about .info .my-name {
   color: #fff;
   text-transform: capitalize;
   font-size: 30px;
   text-align: center;
 }
-#about .info .my-name span {
+main #about .info .my-name span {
   color: #b20600;
 }
-#about .info h2 {
+main #about .info h2 {
   color: #fff;
   font-size: 50px;
   margin: 20px 0;
   text-align: center;
 }
-#about .info .about-text {
+main #about .info .about-text {
   margin-top: 3.5em;
 }
-#about .info .about-text p {
+main #about .info .about-text p {
   color: #fff;
   line-height: 2.5rem;
-  font-size: 1.5rem;
+  font-size: 20px;
 }
-#about .info .about-text p::before {
+main #about .info .about-text p::before {
   content: "<";
   color: #b20600;
 }
-#about .info .about-text p::after {
-  content: "/>";
+main #about .info .about-text p::after {
+  content: " />";
   color: #b20600;
 }
-
 @media screen and (max-width: 1000px) {
-  #about .info .about-text p {
+  main #about .info .about-text p {
     font-size: 20px;
   }
 }
 @media screen and (max-width: 800px) {
-  #about .info .about-text p {
+  main #about .info .about-text p {
     font-size: 18px;
   }
 }
-/* buttons container */
-.buttons-wrapper {
+main .buttons-wrapper {
   height: -moz-fit-content;
   height: fit-content;
   display: flex;
   justify-content: space-between;
   margin-top: 2.5rem;
 }
-
-.cv-button,
-.email-me {
+main .cv-button,
+main .email-me {
   width: 49%;
   color: #fff;
   border: 1px solid #fff;
@@ -235,84 +245,139 @@ header .container .burger .line3 {
   text-decoration: none;
   text-align: center;
 }
-
-.bi-download,
-.bi-envelope {
+main .bi-download,
+main .bi-envelope {
   margin-left: 5px;
   color: #b20600;
 }
-
 @media screen and (max-width: 600px) {
-  .buttons-wrapper {
+  main .buttons-wrapper {
     flex-direction: column;
   }
-  .buttons-wrapper .cv-button,
-  .buttons-wrapper .email-me {
+  main .buttons-wrapper .cv-button,
+  main .buttons-wrapper .email-me {
     width: 100%;
     margin: 10px 0;
   }
 }
-/* skills */
-#skills {
+main #skills {
   width: 100%;
   padding: 3rem 0;
   margin: 3rem 0;
 }
-
-.title-text {
+main .title-text {
   color: #b20600;
-  font-size: 25px;
+  font-size: 20px;
 }
-
-.title {
+main .title {
   color: #fff;
   font-size: 35px;
-  line-height: 5rem;
+  line-height: 4rem;
 }
-
-.skills-wrapper {
+main .skills-wrapper {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 2rem;
 }
-
-.skill {
+main .skill {
   width: 25%;
   font-size: 20px;
   color: #fff;
   line-height: 2.5rem;
 }
-.skill::before {
+main .skill::before {
   content: "<";
   color: #b20600;
 }
-.skill::after {
+main .skill::after {
   content: " />";
   color: #b20600;
 }
-
-/* projects section */
-#projects {
-  width: 100%;
-  padding: 3rem 0;
-  margin: 3rem 0;
+main #education {
+  padding: 50px 0;
 }
-
-footer {
-  width: 100vw;
-  padding: 2em 0;
+main #education .education-container .education-item {
+  margin-top: 40px;
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  width: 100%;
+  padding-bottom: 50px;
+  border-bottom: 2px solid #fff;
+  font-size: 20px;
+}
+main #education .education-container .education-item .education-year {
+  font-weight: 600;
+}
+main #education .education-container .education-item .education-status {
+  font-weight: 400;
+}
+main #education .education-container .education-item .education-degree {
+  font-weight: bold;
+}
+main #education .education-container .education-item .education-company {
+  color: #fff;
+  transition-duration: 0.3s;
+}
+main #education .education-container .education-item .education-company:hover {
+  color: #b20600;
+}
+@media screen and (max-width: 700px) {
+  main .education-item {
+    flex-direction: column;
+  }
+  main .education-item .education-year,
+  main .education-item .education-status,
+  main .education-item .education-degree,
+  main .education-item .education-company {
+    margin: 5px 0;
+  }
+}
+main #languages {
+  padding: 50px 0;
+}
+main #languages .languages-container {
+  display: flex;
   justify-content: space-between;
 }
-footer span {
+main #languages .languages-container .language {
+  margin: 20px 0;
   color: #fff;
 }
-footer .github-linkedin {
-  font-weight: 400;
-  text-decoration: none;
+main #languages .languages-container .language div:nth-child(1) {
+  width: 40px;
+  height: 8px;
+  background-color: #b20600;
+}
+main #languages .languages-container .language p:nth-child(2) {
+  font-weight: bold;
+  font-size: 25px;
+  margin: 20px 0;
+}
+main #languages .languages-container .language p:nth-child(3) {
+  font-size: 20px;
+}
+@media screen and (max-width: 500px) {
+  main #languages .languages-container {
+    flex-direction: column;
+  }
+  main #languages .languages-container .language {
+    width: 100%;
+  }
+  main #languages .languages-container .language div:nth-child(1) {
+    width: 100%;
+  }
+}
+
+/* footer */
+footer {
+  width: 100vw;
+  padding: 30px 0;
+}
+footer p {
   color: #fff;
-  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

@@ -1,7 +1,7 @@
 /* fonts */
 @font-face
     font-family: ubuntu
-    src: url("./assets/fonts/Ubuntu/Ubuntu-Regular.ttf")
+    src: url("../assets/fonts/Ubuntu/Ubuntu-Regular.ttf")
 
 /* variables */
 $white: #fff
@@ -32,8 +32,9 @@ body
     .container
         width: 90%
 
-// 768px    
-// 380px
+@media screen and (max-width: 800px)
+    .title
+        font-size: 28px !important
 
 // -------------------------
 /* nav */
@@ -129,162 +130,219 @@ header
             opacity: 1
 
 // -------------------------
-// about me /
+/* body */
 // -------------------------
-#about
-    width: 100%
-    margin-top: 5em
-    padding: 3rem 0
-    display: flex
-    flex-direction: column
-    align-items: center
-    /* hero image */
-    .hero-img
-        width: 14em
-        border-radius: 50%
-        position: relative
-        margin-bottom: 2em
-        &::before
-            content: ""
-            width: 100%
-            height: 100%
-            position: absolute
-            left: 0
-            top: 0
-            z-index: -1
-            border-radius: 50%
-        &::before
-            background-color: $red
-            transform: translate(-0.5em, -0.5em)
-        img
-            width: 100%
-            margin: 0 auto
-            border-radius: 50%
-    /* hero info */
-    .info
-        .my-name
-            color: $white
-            text-transform: capitalize
-            font-size: 30px
-            text-align: center
-            span
-                color: $red
-        h2
-            color: $white
-            font-size: 50px
-            margin: 20px 0
-            text-align: center
-        /* about me info text */
-        .about-text
-            margin-top: 3.5em
-            p
-                color: $white
-                line-height: 2.5rem
-                font-size: 1.5rem
-                &::before
-                    content: "<"
-                    color: $red
-                &::after
-                    content: "/>"
-                    color: $red
-
-@media screen and (max-width: 1000px)
+main
+    // -------------------------
+    /* about me */
+    // -------------------------
     #about
-        .info
-            .about-text
-                p
-                    font-size: 20px
-
-@media screen and (max-width: 800px)
-    #about
-        .info
-            .about-text
-                p
-                    font-size: 18px
-
-/* buttons container */
-.buttons-wrapper
-    height: fit-content
-    display: flex
-    justify-content: space-between
-    margin-top: 2.5rem
-
-.cv-button,
-.email-me
-    width: 49%
-    color: $white
-    border: 1px solid $white
-    border-radius: 3px
-    padding: 20px 50px
-    text-decoration: none
-    text-align: center
-
-.bi-download,
-.bi-envelope
-    margin-left: 5px
-    color: $red
-
-@media screen and ( max-width: 600px )
-    .buttons-wrapper
+        width: 100%
+        margin-top: 5em
+        padding: 3rem 0
+        display: flex
         flex-direction: column
-        .cv-button,
-        .email-me
-            width: 100%
-            margin: 10px 0
+        align-items: center
+        /* hero image */
+        .hero-img
+            width: 20em
+            border-radius: 50%
+            position: relative
+            margin-bottom: 2em
+            &::before
+                content: ""
+                width: 100%
+                height: 100%
+                position: absolute
+                left: 0
+                top: 0
+                z-index: -1
+                border-radius: 50%
+            &::before
+                background-color: $red
+                transform: translate(-0.5em, -0.5em)
+            img
+                width: 100%
+                margin: 0 auto
+                border-radius: 50%
+        /* hero info */
+        .info
+            .my-name
+                color: $white
+                text-transform: capitalize
+                font-size: 30px
+                text-align: center
+                span
+                    color: $red
+            h2
+                color: $white
+                font-size: 50px
+                margin: 20px 0
+                text-align: center
+            /* about me info text */
+            .about-text
+                margin-top: 3.5em
+                p
+                    color: $white
+                    line-height: 2.5rem
+                    font-size: 20px
+                    &::before
+                        content: "<"
+                        color: $red
+                    &::after
+                        content: " />"
+                        color: $red
 
-/* skills */
-#skills
-    width: 100%
-    padding: 3rem 0
-    margin: 3rem 0
+    @media screen and (max-width: 1000px)
+        #about
+            .info
+                .about-text
+                    p
+                        font-size: 20px
 
-.title-text
-    color: $red
-    font-size: 25px
+    @media screen and (max-width: 800px)
+        #about
+            .info
+                .about-text
+                    p
+                        font-size: 18px
 
-.title
-    color: $white
-    font-size: 35px
-    line-height: 5rem
+    /* buttons container */
+    .buttons-wrapper
+        height: fit-content
+        display: flex
+        justify-content: space-between
+        margin-top: 2.5rem
 
-.skills-wrapper
-    width: 100%
-    display: flex
-    flex-wrap: wrap
-    justify-content: space-between
-    margin-top: 2rem
+    .cv-button,
+    .email-me
+        width: 49%
+        color: $white
+        border: 1px solid $white
+        border-radius: 3px
+        padding: 20px 50px
+        text-decoration: none
+        text-align: center
 
-.skill
-    width: 25%
-    font-size: 20px
-    color: $white
-    line-height: 2.5rem
-    &::before
-        content: "<"
+    .bi-download,
+    .bi-envelope
+        margin-left: 5px
         color: $red
-    &::after
-        content: " />"
-        color: $red
 
-/* projects section */
-#projects
-    width: 100%
-    padding: 3rem 0
-    margin: 3rem 0
+    @media screen and (max-width: 600px)
+        .buttons-wrapper
+            flex-direction: column
+            .cv-button,
+            .email-me
+                width: 100%
+                margin: 10px 0
+
+    /* skills */
+    #skills
+        width: 100%
+        padding: 3rem 0
+        margin: 3rem 0
+
+    .title-text
+        color: $red
+        font-size: 20px
+
+    .title
+        color: $white
+        font-size: 35px
+        line-height: 4rem
+
+    .skills-wrapper
+        width: 100%
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        margin-top: 2rem
+
+    .skill
+        width: 25%
+        font-size: 20px
+        color: $white
+        line-height: 2.5rem
+        &::before
+            content: "<"
+            color: $red
+        &::after
+            content: " />"
+            color: $red
+
+    // -------------------------
+    /* education */
+    // -------------------------
+    #education
+        padding: 50px 0
+        .education-container
+            .education-item
+                margin-top: 40px
+                display: flex
+                justify-content: space-between
+                color: $white
+                width: 100%
+                padding-bottom: 50px
+                border-bottom: 2px solid $white
+                font-size: 20px
+                .education-year
+                    font-weight: 600
+                .education-status
+                    font-weight: 400
+                .education-degree
+                    font-weight: bold
+                .education-company
+                    color: $white
+                    transition-duration: .3s
+                    &:hover
+                        color: $red
+    @media screen and (max-width: 700px)
+        .education-item
+            padding-bottom: 5px
+            flex-direction: column
+            .education-year,
+            .education-status,
+            .education-degree,
+                margin: 5px 0
+
+    // -------------------------
+    /* languages */
+    // -------------------------
+    #languages
+        padding: 50px 0
+        .languages-container
+            display: flex
+            justify-content: space-between
+            .language
+                margin: 20px 0
+                color: $white
+                div:nth-child(1)
+                    width: 40px
+                    height: 8px
+                    background-color: $red
+                p:nth-child(2)
+                    font-weight: bold
+                    font-size: 25px
+                    margin: 20px 0
+                p:nth-child(3)
+                    font-size: 20px
+    @media screen and (max-width: 500px)
+        #languages
+            .languages-container
+                flex-direction: column
+                .language
+                    width: 100%
+                    div:nth-child(1)
+                        width: 100%
 
 // -------------------------
-// footer
+/* footer */
 // -------------------------
 footer
     width: 100vw
-    padding: 2em 0
-    display: flex
-    align-items: center
-    justify-content: space-between
-    span
+    padding: 30px 0
+    p
         color: $white
-    .github-linkedin
-        font-weight: 400
-        text-decoration: none
-        color: $white
-        font-weight: 700
+        font-size: 20px
+        text-align: center
