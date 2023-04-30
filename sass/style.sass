@@ -212,6 +212,8 @@ main
 
     @media screen and (max-width: 800px)
         #about
+            .hero-img
+                width: 60%
             .info
                 .about-text
                     p
@@ -304,8 +306,8 @@ main
                     display: flex
                     flex-direction: column
                     justify-content: center
-                    padding-left: 50px 
-                    p:nth-child(1)
+                    padding-left: 50px
+                    p
                         color: $red
                         font-weight: 400
                         font-size: 20px
@@ -323,6 +325,21 @@ main
                         text-decoration: none
                         padding: 10px 40px
                         background-color: $red
+    @media screen and (max-width: 500px)
+        #projects
+            .projects-container
+                .project-item
+                    height: 250px
+                    .project-item-content
+                        padding-left: 20px
+                        p
+                            font-size: 18px
+                        h3
+                            font-size: 25px
+                        a
+                            padding: 15px 20px
+                            font-size: 18px
+                            margin-top: 10px
 
     // -------------------------
     /* education */
@@ -382,6 +399,7 @@ main
                 flex-direction: column
                 .language
                     width: 100%
+                    margin-bottom: 20px
                     div:nth-child(1)
                         width: 100%
 

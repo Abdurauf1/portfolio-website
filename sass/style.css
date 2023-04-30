@@ -240,6 +240,9 @@ main #about .info .about-text p::after {
   }
 }
 @media screen and (max-width: 800px) {
+  main #about .hero-img {
+    width: 60%;
+  }
   main #about .info .about-text p {
     font-size: 18px;
   }
@@ -336,7 +339,7 @@ main #projects .projects-container .project-item .project-item-content {
   justify-content: center;
   padding-left: 50px;
 }
-main #projects .projects-container .project-item .project-item-content p:nth-child(1) {
+main #projects .projects-container .project-item .project-item-content p {
   color: #b20600;
   font-weight: 400;
   font-size: 20px;
@@ -357,6 +360,25 @@ main #projects .projects-container .project-item .project-item-content a {
   text-decoration: none;
   padding: 10px 40px;
   background-color: #b20600;
+}
+@media screen and (max-width: 500px) {
+  main #projects .projects-container .project-item {
+    height: 250px;
+  }
+  main #projects .projects-container .project-item .project-item-content {
+    padding-left: 20px;
+  }
+  main #projects .projects-container .project-item .project-item-content p {
+    font-size: 18px;
+  }
+  main #projects .projects-container .project-item .project-item-content h3 {
+    font-size: 25px;
+  }
+  main #projects .projects-container .project-item .project-item-content a {
+    padding: 15px 20px;
+    font-size: 18px;
+    margin-top: 10px;
+  }
 }
 main #education {
   padding: 50px 0;
@@ -423,6 +445,7 @@ main #languages .languages-container .language p:nth-child(3) {
   }
   main #languages .languages-container .language {
     width: 100%;
+    margin-bottom: 20px;
   }
   main #languages .languages-container .language div:nth-child(1) {
     width: 100%;
