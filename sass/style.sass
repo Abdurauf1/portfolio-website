@@ -292,28 +292,37 @@ main
                 height: 500px
                 background-image: url("../assets/images/lumia.png")
                 background-size: cover
-                padding: 0 100px
-                display: flex
-                justify-content: center
-                flex-direction: column
-                p:nth-child(1)
-                    color: $red
-                    font-weight: 400
-                    font-size: 20px
-                h3
-                    color: $white
-                    font-size: 32px
-                    line-height: 60px
-                a
-                    margin-top: 20px
-                    width: fit-content
-                    border-radius: 5px
-                    font-size: 20px
-                    font-weight: 500
-                    color: $white
-                    text-decoration: none
-                    padding: 10px 40px
-                    background-color: $red
+                position: relative
+                border-radius: 10px
+                .project-item-content
+                    position: absolute
+                    top: 0
+                    left: 0
+                    right: 0
+                    bottom: 0
+                    background-color: rgba(0, 0, 0, 0.7)
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    padding-left: 50px 
+                    p:nth-child(1)
+                        color: $red
+                        font-weight: 400
+                        font-size: 20px
+                    h3
+                        color: $white
+                        font-size: 32px
+                        line-height: 60px
+                    a
+                        margin-top: 20px
+                        width: fit-content
+                        border-radius: 5px
+                        font-size: 20px
+                        font-weight: 500
+                        color: $white
+                        text-decoration: none
+                        padding: 10px 40px
+                        background-color: $red
 
     // -------------------------
     /* education */

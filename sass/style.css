@@ -321,22 +321,32 @@ main #projects .projects-container .project-item {
   height: 500px;
   background-image: url("../assets/images/lumia.png");
   background-size: cover;
-  padding: 0 100px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  position: relative;
+  border-radius: 10px;
 }
-main #projects .projects-container .project-item p:nth-child(1) {
+main #projects .projects-container .project-item .project-item-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 50px;
+}
+main #projects .projects-container .project-item .project-item-content p:nth-child(1) {
   color: #b20600;
   font-weight: 400;
   font-size: 20px;
 }
-main #projects .projects-container .project-item h3 {
+main #projects .projects-container .project-item .project-item-content h3 {
   color: #fff;
   font-size: 32px;
   line-height: 60px;
 }
-main #projects .projects-container .project-item a {
+main #projects .projects-container .project-item .project-item-content a {
   margin-top: 20px;
   width: -moz-fit-content;
   width: fit-content;
