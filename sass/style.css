@@ -322,10 +322,17 @@ main #projects .projects-container {
 main #projects .projects-container .project-item {
   width: 100%;
   height: 500px;
-  background-image: url("../assets/images/lumia.png");
   background-size: cover;
   position: relative;
   border-radius: 10px;
+  margin-top: 30px;
+}
+main #projects .projects-container .project-item:nth-child(1) {
+  margin-top: 0;
+  background-image: url("../assets/images/lumia.png");
+}
+main #projects .projects-container .project-item:nth-child(2) {
+  background-image: url("../assets/images/color_flipper.png");
 }
 main #projects .projects-container .project-item .project-item-content {
   position: absolute;

@@ -292,10 +292,16 @@ main
             .project-item
                 width: 100%
                 height: 500px
-                background-image: url("../assets/images/lumia.png")
                 background-size: cover
                 position: relative
                 border-radius: 10px
+                margin-top: 30px
+                &:nth-child(1)
+                    margin-top: 0
+                    background-image: url("../assets/images/lumia.png")
+                &:nth-child(2)
+                    background-image: url("../assets/images/color_flipper.png")
+
                 .project-item-content
                     position: absolute
                     top: 0
